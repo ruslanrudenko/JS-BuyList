@@ -12,8 +12,8 @@ body{
     
     width:65%;
     float:left;
-    padding:10px;
-    min-width:360px;
+    padding-right:2%;
+    min-width:300px;
 
     
 }
@@ -30,12 +30,11 @@ body{
     
 }
 .right-block{
-    
+    display:inline-block;
     width:30%;
     float:left;
     color:black;
-    padding:10px;
-    min-width:270px;
+    padding-left:2%;
     height:auto;
 }
 
@@ -51,8 +50,8 @@ input{
     background-color:aqua;
     height:100%;
     width:28%;
-    min-width:100px;
-
+    position:relative;
+   
     
 }
 .item1{
@@ -66,20 +65,38 @@ input{
     float:left;
     display:inline-block;
     text-align: left;
-    width:17%;
+    width:20%;
     height:25px;
     padding:15px;
+    padding-left:0;
+    padding-right:0;
+}
+.rightButtons{
+    float:right;
+    display:inline-block;
+    width:10%;
+    min-width:110px;
+    padding-right:10px;
+    padding-top:15px;
+    padding-bottom:15px;
+        padding-left:0;
+    padding-right:0;
+    
+    
 }
 .buttons{
     display:inline-block;
+    
+    margin-left:10%;
     width:30%;
     text-align:center;
     padding:15px;
+        padding-left:0;
+    padding-right:0;
     
 }
 .red-button{
     float:left;
-    margin-left:20%;
     text-align:center;
     background-color:red;
   display:inline-block;
@@ -88,6 +105,7 @@ input{
   border-radius: 50%;
   border: 1px solid red;
     color:white;
+    position:relative;
 }
 .count{
     float:left;
@@ -111,18 +129,9 @@ input{
   border-radius: 50%;
   border: 1px solid green;
     color:white;
+    position:relative;
 }
-.rightButtons{
-    display:inline-block;
-    width:10%;
-    min-width:110px;
-    padding-right:10px;
-    padding-top:15px;
-    padding-bottom:15px;
-    float:right;
-    
-    
-}
+
 .cuplenoB{
     display:inline-block;
     text-align:center;
@@ -130,11 +139,13 @@ input{
     height:25;
     color:black;
     margin-left:2%;
-    float:    
+    position:relative;
 }
 .X{
     background-color:red;
+position:relative;
 }
+
 .zal{
     width:auto;
     padding:10px;
@@ -142,7 +153,7 @@ input{
     background-color:white;
     border-top:1px solid grey;
     border-bottom:1px solid grey;
-    
+
 }
 .zalItems{
     width:auto;
@@ -194,6 +205,101 @@ input{
     
     
     
+}
+.badge{
+    position:fixed;
+    background-color:darkviolet;
+    border-radius: 10px 10px;
+    bottom:-200px;
+    left:20px;
+    color:white;
+    height:300px;
+    min-width:200px;
+    white-space:nowrap;
+    text-align: center;
+    transition: all 1s ease;
+    
+}
+.badge-title{
+    font-size:55px;
+    padding:10px;
+    margin:0;
+}
+.badge-created-by{
+    font-size:30px;
+    padding:10px;
+    padding-top:30px;
+    padding-bottom:0;
+    margin:0;
+    text-align: left;
+    
+}
+
+.badge-name{
+    font-size:35px;
+    padding:10px;
+    padding-top:0;
+    margin:0;
+    
+}
+.badge:hover {
+    background-color: darkblue;
+    transform: translateY(-100px);
+}
+@media print {
+    .badge-title {
+        display: none;
+    }
+    .badge-created-by{
+        margin:0;
+    }
+    .badge-name{
+        margin:0;
+    }
+
+    .badge {
+        border: solid darkviolet 1px;
+        background-color:white;
+        color:black;
+        height:100px;
+        bottom:0px;
+    }
+}
+@media (max-width:500px){
+    .left-block{
+        width:100%;
+        padding-right:0;
+    }
+    .right-block{
+        width:100%;
+        padding-left:0;
+    }
+    
+}
+
+button::after {
+    background: darkviolet;
+    border-radius: 10px;
+    color: white;
+    content: attr(data-tooltip);
+    transition: all 1s ease-in-out;
+    position: absolute;
+    padding-left:5px;
+    padding-right:5px;
+    left:-50px;
+    right:-50px;
+    bottom:100%;
+    margin:auto;
+    transform: scale(0);
+    font-size:14px;
+
+}
+
+button:hover::after {
+    
+    transform: scale(1);
+    transition: all 1s ease;
+
 }
 
 
