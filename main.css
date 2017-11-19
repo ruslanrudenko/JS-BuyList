@@ -45,7 +45,7 @@ input{
     min-width:150px;
 
 }
-.button{
+.add-button{
 
     background-color:aqua;
     height:100%;
@@ -61,7 +61,7 @@ input{
     background-color:white;
     border-bottom:1px solid grey;
 }
-.item-name{
+.item-name, .change-name{
     float:left;
     display:inline-block;
     text-align: left;
@@ -71,6 +71,11 @@ input{
     padding-left:0;
     padding-right:0;
 }
+.change-name{
+    display:none;
+    height:10px;
+}
+
 .rightButtons{
     float:right;
     display:inline-block;
@@ -135,8 +140,7 @@ input{
 .cuplenoB{
     display:inline-block;
     text-align:center;
-    width:40;
-    height:25;
+
     color:black;
     margin-left:2%;
     position:relative;

@@ -12,18 +12,21 @@
         <div class="left-block">
         <div class="inputing-area">
             
-            <input type="text" placeholder="Назва товару">
+            <input type="text" class="new-item" placeholder="Назва товару">
             
             
-            <button class="button" data-tooltip="Додати новий товар до кошика">Додати</button>
+            <button class="add-button" data-tooltip="Додати новий товар до кошика">Додати</button>
             
             </div>
-            <div class="item1">
+            <div class="itemlist">
+            <template class="temp">
+                <div class="item1">
+
                 <div class="item-name">
-                    Помідори
                 </div>
+                    <input class="change-name">
                 <div class="buttons">
-                <button class="red-button" data-tooltip="Зменшити кількість товару">
+                <button class="red-button" disabled data-tooltip="Зменшити кількість товару">
                     -
                     </button>
                     <span class="count">
@@ -40,75 +43,26 @@
                 <button class="X" data-tooltip="Видалити товар">
                     X
                     </button></div>
+                </div>
                 
-            </div>
-                        <div class="item1">
-                <div class="item-name">
-                    Печиво
-                </div>
-                <div class="buttons">
-                <button class="red-button" data-tooltip="Зменшити кількість товару">
-                    -
-                    </button>
-                    <span class="count">
-                        1
-                    </span>
-                <button class="green-button" data-tooltip="Збільшити кількість товару">
-                    +
-                    </button>
-                </div>
-                <div class="rightButtons">
-                <button class="cuplenoB" data-tooltip="Відмітити товар як куплений">
-                    Куплено
-                    </button>
-                <button class="X" data-tooltip="Видалити товар">
-                    X
-                    </button></div>
-                
-            </div>
-                        <div class="item1">
-                <div class="item-name">
-                    Сир
-                </div>
-                <div class="buttons">
-                <button class="red-button" data-tooltip="Зменшити кількість товару">
-                    -
-                    </button>
-                    <span class="count">
-                        1
-                    </span>
-                <button class="green-button" data-tooltip="Збільшити кількість товару">
-                    +
-                    </button>
-                </div>
-                <div class="rightButtons">
-                <button class="cuplenoB" data-tooltip="Відмітити товар як куплений">
-                    Куплено
-                    </button>
-                <button class="X" data-tooltip="Видалити товар">
-                    X
-                    </button></div>
-                
-            </div>
+            </template>
+
             
+        </div>
         </div>
         <div class="right-block">
             <div class="zal">
             <h3>Залишилося</h3></div>
             <div class="zalItems">
+                <template class="tempRight">
                 <span class="tovar">
-                    <span class="tovarText">Помідори</span>
-                    <span class="odinCircle">1</span></span>
-                <span class="tovar">
-                     <span class="tovarText">Печиво</span>
-                    <span class="odinCircle">1</span></span>
-                <span class="tovar">
-                 <span class="tovarText">Сир</span>
-                    <span class="odinCircle">1</span></span>
+                    <span class="tovarText"></span>
+                    <span class="odinCircle">1</span></span></template>
             </div>
             <div class="kuplenoHeader">
             <h3>Куплено</h3></div>
             <div class="kupleno">
+
             </div>
         </div>    
         
@@ -121,6 +75,8 @@
     <div class="badge-name">
         Ruslan Rudenko
         </div></div>
+    <script	type="text/javascript" src="js/jquery.js">	</script>
+    <script	type="text/javascript" src="js/main.js">	</script>
 
 </body>
 </html>
